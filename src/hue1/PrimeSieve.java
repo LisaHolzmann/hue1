@@ -9,13 +9,12 @@ package hue1;
  *
  * @author holzm
  */
-public class Main {
+public interface PrimeSieve {
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
-    }
+    //schaut ob p Primzahl
+    public boolean isPrime(int p);
+
+    //gibt Primzahlen bis zur Obergrenze aus
+    public void printPrimes();
 
 }
