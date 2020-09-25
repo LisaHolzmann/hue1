@@ -14,6 +14,7 @@ import java.util.Scanner;
 public class EratosthenesPrimeSieve implements PrimeSieve {
 
     int grenze;
+    static int[] primeArray = null;
 
     /**
      * @param args the command line arguments
@@ -26,7 +27,8 @@ public class EratosthenesPrimeSieve implements PrimeSieve {
     }
 
     public EratosthenesPrimeSieve(int grenze) {
-        this.grenze = grenze;
+        primeArray = new int[grenze];
+        //this.grenze = grenze;
     }
 
     @Override
@@ -49,6 +51,9 @@ public class EratosthenesPrimeSieve implements PrimeSieve {
 
     @Override
     public void printPrimes() {
+        for (int i = 0; i < primeArray.length; i++) {
+            primeArray[i] = i + 1;
+        }
     }
 
 }
