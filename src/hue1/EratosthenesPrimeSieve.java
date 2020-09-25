@@ -47,7 +47,7 @@ public class EratosthenesPrimeSieve implements PrimeSieve {
                 return false;
             }
         }
-        return false;
+        return true;
     }
 
     @Override
@@ -56,11 +56,16 @@ public class EratosthenesPrimeSieve implements PrimeSieve {
             primeArray[i] = i;
         }
         for (int i = 0; i < primeArray.length; i++) {
-            if (isPrime(primeArray[i]) == true) {
-                primeArray[i] = null;
+            if (isPrime(primeArray[i]) == false) {
+                primeArray[i] = -1;
             }
         }
-        System.out.println(primeArray);
+        for (int i = 0; i < primeArray.length; i++) {
+            if (primeArray[i] != -1) {
+                System.out.println(primeArray[i]);
+            }
+        }
+
     }
 
 }
